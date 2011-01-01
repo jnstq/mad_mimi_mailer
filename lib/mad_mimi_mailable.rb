@@ -63,7 +63,7 @@ module MadMimiMailable
       return unless perform_deliveries
 
       if delivery_method == :test
-        deliveries << (mail.mail ? mail.mail : mail)
+        deliveries << mail
       else
         if (all_recipients = mail.recipients).is_a? Array
           all_recipients.each do |recipient|
